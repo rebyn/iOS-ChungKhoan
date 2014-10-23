@@ -417,6 +417,7 @@
 				493B364719F9820C00FD4614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493B364819F9820C00FD4614 /* Build configuration list for PBXNativeTarget "ChungKhoanTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				493B364A19F9820C00FD4614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
