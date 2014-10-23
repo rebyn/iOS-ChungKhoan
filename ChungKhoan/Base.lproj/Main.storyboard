@@ -75,6 +75,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="stickerLabel" destination="cm1-k0-5mg" id="fko-AK-fKT"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

@@ -24,10 +24,10 @@
     return 5;
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (StockWithPercentCVC *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     StockWithPercentCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StockWithPercent" forIndexPath:indexPath];
     
+    cell.stickerLabel.text = @"VND 0.1%";
     return cell;
 }
 

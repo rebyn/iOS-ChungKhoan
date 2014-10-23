@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface StockWithPercentCVC : UICollectionViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *stickerLabel;
 @end
