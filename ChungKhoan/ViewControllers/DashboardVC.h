@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DashboardVC.h
 //  ChungKhoan
 //
 //  Created by Tu Hoang on 10/24/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DashboardVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
-
