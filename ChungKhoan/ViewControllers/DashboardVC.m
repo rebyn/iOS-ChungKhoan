@@ -10,12 +10,19 @@
 #import "StockWithPercentCVC.h"
 
 @interface DashboardVC ()
+@property (weak, nonatomic) IBOutlet UICollectionView *stockWithPercent;
+@property (weak, nonatomic) IBOutlet UICollectionView *stockWithPercentAndValue;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *searchResultsTableView;
+
 @end
 
 @implementation DashboardVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self hookSearchBar];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -24,11 +31,33 @@
     return 5;
 }
 
-- (StockWithPercentCVC *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    StockWithPercentCVC *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StockWithPercent" forIndexPath:indexPath];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell;
+
+    if (collectionView == self.stockWithPercent) {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StockWithPercent" forIndexPath:indexPath];
+        ((StockWithPercentCVC *)cell).stickerLabel.text = @"VND 0.1%";
+    } else {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"StockWithPercentAndValue" forIndexPath:indexPath];
+        ((StockWithPercentCVC *)cell).stickerLabel.text = @"VND 0.1%";
+    };
     
-    cell.stickerLabel.text = @"VND 0.1%";
     return cell;
+}
+
+#pragma mark - Hook StickerSearchTVC
+
+- (void)hookSearchBar {
+    self.searchController = [[StickerSearchTVC alloc] init];
+    
+    [self.searchResultsTableView setDelegate:self.searchController];
+    [self.searchResultsTableView setDataSource:self.searchController];
+    
+    UISearchDisplayController *searchDisplayCtrl = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self.searchController];
+    self.searchBar.delegate = self;
+    searchDisplayCtrl.delegate = self;
+    searchDisplayCtrl.searchResultsDelegate = self.searchController;
+    searchDisplayCtrl.searchResultsDataSource = self.searchController;
 }
 
 /*

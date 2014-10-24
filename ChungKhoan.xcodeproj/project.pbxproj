@@ -13,6 +13,7 @@
 		493B363319F9820C00FD4614 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493B363219F9820C00FD4614 /* Images.xcassets */; };
 		493B363619F9820C00FD4614 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493B363419F9820C00FD4614 /* LaunchScreen.xib */; };
 		493B364219F9820C00FD4614 /* ChungKhoanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 493B364119F9820C00FD4614 /* ChungKhoanTests.m */; };
+		494F2F7219FA462000BB3952 /* StickerSearchTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F2F7119FA462000BB3952 /* StickerSearchTVC.m */; };
 		49C9F7BE19F9B218004E54F1 /* DashboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F7BD19F9B218004E54F1 /* DashboardVC.m */; };
 		49C9F7C219F9B444004E54F1 /* StockWithPercentCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F7C119F9B444004E54F1 /* StockWithPercentCVC.m */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,8 @@
 		493B363B19F9820C00FD4614 /* ChungKhoanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChungKhoanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		493B364019F9820C00FD4614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493B364119F9820C00FD4614 /* ChungKhoanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChungKhoanTests.m; sourceTree = "<group>"; };
+		494F2F7019FA462000BB3952 /* StickerSearchTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StickerSearchTVC.h; path = Cells/StickerSearchTVC.h; sourceTree = "<group>"; };
+		494F2F7119FA462000BB3952 /* StickerSearchTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StickerSearchTVC.m; path = Cells/StickerSearchTVC.m; sourceTree = "<group>"; };
 		49C9F7BC19F9B218004E54F1 /* DashboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardVC.h; path = ViewControllers/DashboardVC.h; sourceTree = "<group>"; };
 		49C9F7BD19F9B218004E54F1 /* DashboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardVC.m; path = ViewControllers/DashboardVC.m; sourceTree = "<group>"; };
 		49C9F7C019F9B444004E54F1 /* StockWithPercentCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockWithPercentCVC.h; path = Cells/StockWithPercentCVC.h; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 			children = (
 				49C9F7C019F9B444004E54F1 /* StockWithPercentCVC.h */,
 				49C9F7C119F9B444004E54F1 /* StockWithPercentCVC.m */,
+				494F2F7019FA462000BB3952 /* StickerSearchTVC.h */,
+				494F2F7119FA462000BB3952 /* StickerSearchTVC.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494F2F7219FA462000BB3952 /* StickerSearchTVC.m in Sources */,
 				493B362B19F9820C00FD4614 /* AppDelegate.m in Sources */,
 				49C9F7C219F9B444004E54F1 /* StockWithPercentCVC.m in Sources */,
 				493B362819F9820C00FD4614 /* main.m in Sources */,

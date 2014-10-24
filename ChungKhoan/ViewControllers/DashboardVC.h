@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StickerSearchTVC.h"
 
-@interface DashboardVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface DashboardVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
+
+@property (strong, nonatomic) StickerSearchTVC *searchController;
 
 @end
