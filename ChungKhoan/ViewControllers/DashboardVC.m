@@ -13,16 +13,12 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *stockWithPercent;
 @property (weak, nonatomic) IBOutlet UICollectionView *stockWithPercentAndValue;
 
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (weak, nonatomic) IBOutlet UITableView *searchResultsTableView;
-
 @end
 
 @implementation DashboardVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self hookSearchBar];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -45,21 +41,6 @@
     return cell;
 }
 
-#pragma mark - Hook StickerSearchTVC
-
-- (void)hookSearchBar {
-    self.searchController = [[StickerSearchTVC alloc] init];
-    
-    [self.searchResultsTableView setDelegate:self.searchController];
-    [self.searchResultsTableView setDataSource:self.searchController];
-    
-    UISearchDisplayController *searchDisplayCtrl = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self.searchController];
-    self.searchBar.delegate = self;
-    searchDisplayCtrl.delegate = self;
-    searchDisplayCtrl.searchResultsDelegate = self.searchController;
-    searchDisplayCtrl.searchResultsDataSource = self.searchController;
-}
-
 /*
 #pragma mark - Navigation
 
@@ -69,5 +50,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

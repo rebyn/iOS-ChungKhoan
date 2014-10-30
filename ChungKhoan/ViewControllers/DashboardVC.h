@@ -11,6 +11,4 @@
 
 @interface DashboardVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 
-@property (strong, nonatomic) StickerSearchTVC *searchController;
-
 @end
